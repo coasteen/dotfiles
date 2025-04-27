@@ -25,9 +25,9 @@ alias vi="vim"
 alias cat="bat"
 alias ls="eza --icons"
 
-alias cdwm="cd ~/suckless/dwm && doas vim config.h; cd -"
+alias cdwm="cd ~/.suckless/dwm && doas vim config.h; cd -"
 alias cpicom="vim ~/.config/picom/picom.conf"
-alias mdwm="cd ~/suckless/dwm && doas make install && cd -"
+alias mdwm="cd ~/.suckless/dwm && doas make install && cd -"
 alias cneo="vim ~/.config/neofetch/con*"
 
 function sudo() {
