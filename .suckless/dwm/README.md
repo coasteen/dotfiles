@@ -28,6 +28,3 @@ Run `./configure` to properly set up `config.mk`.
 - `MODKEY + SHIFTMASK + K/J` - Move window in on the direction of K/J on a qwerty keyboard
 - `MODKEY + H/L` - Expand/shrink master window in direction of H/L on a qwerty keyboard
 - `MODKEY + SHIFTMASK + L` - Lock using slock (MUST BE INSTALLED)
-
-## TO-DO list:
-- [no] configure man page 
