@@ -22,7 +22,7 @@ Run `./configure` to properly set up `config.mk`.
 - `MODKEY + o/O` - Increase/decrease number of masters
 - `MODKEY + j/k` - Move focus down/up
 - `MODKEY + J/K` - Move window in stack down/up
-- `MODKEY + q` - Kill DWM
+- `MODKEY + SHIFTMASK + q` - Kill DWM
 - `MODKEY + Space` - Set all windows to Floating mode
 - `MODKEY + K/J` - Change focused window in on the direction of K/J on a qwerty keyboard
 - `MODKEY + SHIFTMASK + K/J` - Move window in on the direction of K/J on a qwerty keyboard
