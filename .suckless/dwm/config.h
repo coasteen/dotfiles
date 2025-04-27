@@ -31,43 +31,45 @@ static const char dmenufont[]            = "JetBrainsMono Nerd Font:size=10";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
-static char normfgcolor[]                = "#bbbbbb";
-static char normbgcolor[]                = "#1e2030";
-static char normbordercolor[]            = "#444444";
-static char normfloatcolor[]             = "#db8fd9";
+static char normfgcolor[]                = "#ebdbb2";
+static char normbgcolor[]                = "#282828";
+static char normbordercolor[]            = "#3c3836";
+static char normfloatcolor[]             = "#b16286";
 
-static char selfgcolor[]                 = "#eeeeee";
-static char selbgcolor[]                 = "#24273a";
-static char selbordercolor[]             = "#24273a";
-static char selfloatcolor[]              = "#24273a";
+static char selfgcolor[]                 = "#282828";  /* Dark background for better contrast */
+static char selbgcolor[]                 = "#d79921";  /* Brighter yellow for selections */
+static char selbordercolor[]             = "#d79921";
+static char selfloatcolor[]              = "#d79921";
 
-static char titlenormfgcolor[]           = "#bbbbbb";
-static char titlenormbgcolor[]           = "#1e2030";
-static char titlenormbordercolor[]       = "#444444";
-static char titlenormfloatcolor[]        = "#db8fd9";
+static char titlenormfgcolor[]           = "#ebdbb2";
+static char titlenormbgcolor[]           = "#282828";
+static char titlenormbordercolor[]       = "#3c3836";
+static char titlenormfloatcolor[]        = "#b16286";
 
-static char titleselfgcolor[]            = "#eeeeee";
-static char titleselbgcolor[]            = "#24273a";
-static char titleselbordercolor[]        = "#24273a";
-static char titleselfloatcolor[]         = "#24273a";
+static char titleselfgcolor[]            = "#282828";  /* Dark text on bright yellow */
+static char titleselbgcolor[]            = "#d79921";  /* Brighter yellow */
+static char titleselbordercolor[]        = "#d79921";
+static char titleselfloatcolor[]         = "#d79921";
 
-static char tagsnormfgcolor[]            = "#bbbbbb";
-static char tagsnormbgcolor[]            = "#1e2030"; static char
-tagsnormbordercolor[]        = "#444444"; static char tagsnormfloatcolor[]
-= "#db8fd9";
+static char tagsnormfgcolor[]            = "#ebdbb2";
+static char tagsnormbgcolor[]            = "#282828";
+static char tagsnormbordercolor[]        = "#3c3836";
+static char tagsnormfloatcolor[]         = "#b16286";
 
-static char tagsselfgcolor[]             = "#eeeeee"; static char
-tagsselbgcolor[]             = "#24273a"; static char tagsselbordercolor[]
-= "#24273a"; static char tagsselfloatcolor[]          = "#24273a";
+static char tagsselfgcolor[]             = "#282828";  /* Dark text on bright yellow */
+static char tagsselbgcolor[]             = "#d79921";  /* Brighter yellow */
+static char tagsselbordercolor[]         = "#d79921";
+static char tagsselfloatcolor[]          = "#d79921";
 
-static char hidnormfgcolor[]             = "#005577"; static char
-hidselfgcolor[]              = "#24273a"; static char hidnormbgcolor[]
-= "#1e2030"; static char hidselbgcolor[]              = "#1e2030";
+static char hidnormfgcolor[]             = "#458588";
+static char hidselfgcolor[]              = "#689d6a";
+static char hidnormbgcolor[]             = "#282828";
+static char hidselbgcolor[]              = "#282828";
 
-static char urgfgcolor[]                 = "#bbbbbb"; static char urgbgcolor[]
-= "#1e2030";
-static char urgbordercolor[]             = "#ff0000";
-static char urgfloatcolor[]              = "#db8fd9";
+static char urgfgcolor[]                 = "#ebdbb2";
+static char urgbgcolor[]                 = "#cc241d";
+static char urgbordercolor[]             = "#fb4934";
+static char urgfloatcolor[]              = "#b16286";
 
 
 
@@ -333,6 +335,7 @@ static Key keys[] = {
 	{ 0, 					XF86XK_AudioLowerVolume, spawn,			SHCMD(XK_DOWN) },
 	//lock
 	{ MODKEY|ShiftMask, 				XK_l, 			spawn,			SHCMD("slock") },
+	{ 0, 						XK_Print, 		spawn,			SHCMD("screenie") },
 };
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
