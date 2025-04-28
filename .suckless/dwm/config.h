@@ -26,7 +26,7 @@ static const int statusmon               = 'A';
 static int tagindicatortype              = INDICATOR_NONE;
 static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_NONE;
-static const char *fonts[]               = { "JetBrainsMono Nerd Font:size=10" };
+static const char *fonts[]               = { "JetBrainsMono Nerd Font:size=8" };
 static const char dmenufont[]            = "JetBrainsMono Nerd Font:size=10";
 
 static char c000000[]                    = "#000000"; // placeholder value
