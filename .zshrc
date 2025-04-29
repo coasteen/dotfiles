@@ -5,7 +5,7 @@
 ############
 ## PROMPT ##
 ############
-
+#
 ## CUSTOM PROMPT
 PROMPT="[ $%n@%m %~ ] "
 #
