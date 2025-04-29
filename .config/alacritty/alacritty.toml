@@ -10,43 +10,43 @@ lines = 30
 normal = { family = "JetBrainsMono Nerd Font", style = "regular" }
 size = 6.5
 [colors]
-  # Catppuccin Macchiato (Base Colors)
-  primary.background = "#24273A"  # Base
-  primary.foreground = "#CAD3F5"  # Text
-  cursor.text        = "#24273A"  # Cursor Text (Background)
-  cursor.cursor      = "#F4DBD6"  # Cursor (Rosewater)
+
+  # Gruvbox Dark
+  primary.background = "#282828"  # Dark background
+  primary.foreground = "#ebdbb2"  # Light foreground
+  cursor.text        = "#282828"  # Cursor text (background)
+  cursor.cursor      = "#ebdbb2"  # Cursor (foreground color)
 
   # Normal Colors
-  normal.black   = "#494D64"  # Surface1
-  normal.red     = "#ED8796"  # Red
-  normal.green   = "#A6DA95"  # Green
-  normal.yellow  = "#EED49F"  # Yellow
-  normal.blue    = "#8AADF4"  # Blue
-  normal.magenta = "#F5BDE6"  # Pink
-  normal.cyan    = "#8BD5CA"  # Teal
-  normal.white   = "#B8C0E0"  # Subtext1
+  normal.black   = "#282828"  # Dark background
+  normal.red     = "#cc241d"  # Red
+  normal.green   = "#98971a"  # Green
+  normal.yellow  = "#d79921"  # Yellow
+  normal.blue    = "#458588"  # Blue
+  normal.magenta = "#b16286"  # Magenta
+  normal.cyan    = "#689d6a"  # Cyan
+  normal.white   = "#a89984"  # Light gray
 
   # Bright Colors
-  bright.black   = "#5B6078"  # Surface2
-  bright.red     = "#ED8796"  # Red (Bright)
-  bright.green   = "#A6DA95"  # Green (Bright)
-  bright.yellow  = "#EED49F"  # Yellow (Bright)
-  bright.blue    = "#8AADF4"  # Blue (Bright)
-  bright.magenta = "#F5BDE6"  # Pink (Bright)
-  bright.cyan    = "#8BD5CA"  # Teal (Bright)
-  bright.white   = "#A5ADCB"  # Subtext0
+  bright.black   = "#928374"  # Gray
+  bright.red     = "#fb4934"  # Bright red
+  bright.green   = "#b8bb26"  # Bright green
+  bright.yellow  = "#fabd2f"  # Bright yellow
+  bright.blue    = "#83a598"  # Bright blue
+  bright.magenta = "#d3869b"  # Bright magenta
+  bright.cyan    = "#8ec07c"  # Bright cyan
+  bright.white   = "#ebdbb2"  # Bright white
 
-  # Dim Colors (Optional, for less contrast)
-  dim.black   = "#494D64"  # Surface1 (Dim)
-  dim.red     = "#ED8796"  # Red (Dim)
-  dim.green   = "#A6DA95"  # Green (Dim)
-  dim.yellow  = "#EED49F"  # Yellow (Dim)
-  dim.blue    = "#8AADF4"  # Blue (Dim)
-  dim.magenta = "#F5BDE6"  # Pink (Dim)
-  dim.cyan    = "#8BD5CA"  # Teal (Dim)
-  dim.white   = "#B8C0E0"  # Subtext1 (Dim)
+  # Dim Colors (Optional)
+  dim.black   = "#3c3836"   # Dim black
+  dim.red     = "#9d0006"   # Dim red
+  dim.green   = "#79740e"   # Dim green
+  dim.yellow  = "#b57614"   # Dim yellow
+  dim.blue    = "#076678"   # Dim blue
+  dim.magenta = "#8f3f71"   # Dim magenta
+  dim.cyan    = "#427b58"   # Dim cyan
+  dim.white   = "#a89984"   # Dim white
 
 [cursor]
-style.shape = "beam"
 style.blinking = "On"
 #color.cursor = "#F4DBD6"  # Rosewater
