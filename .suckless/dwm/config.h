@@ -1,7 +1,7 @@
 /*
  *
  **
- ** All credits to suckless.org
+ ** All credits to suckless.org and Swindles McCoop
  ** Coasteen's DWM configuration
  ** https://www.github.com/coasteen/suckless/
  **
@@ -27,7 +27,7 @@ static int tagindicatortype              = INDICATOR_NONE;
 static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_NONE;
 static const char *fonts[]               = { "JetBrainsMono Nerd Font:size=8" };
-static const char dmenufont[]            = "JetBrainsMono Nerd Font:size=10";
+static const char dmenufont[]            = "JetBrainsMono Nerd Font:size=8";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
@@ -37,7 +37,7 @@ static char normbordercolor[]            = "#3c3836";
 static char normfloatcolor[]             = "#b16286";
 
 static char selfgcolor[]                 = "#282828";  /* Dark background for better contrast */
-static char selbgcolor[]                 = "#d79921";  /* Brighter yellow for selections */
+static char selbgcolor[]                 = "#fe8019";  /* Brighter yellow for selections */
 static char selbordercolor[]             = "#d79921";
 static char selfloatcolor[]              = "#d79921";
 
@@ -47,7 +47,7 @@ static char titlenormbordercolor[]       = "#3c3836";
 static char titlenormfloatcolor[]        = "#b16286";
 
 static char titleselfgcolor[]            = "#282828";  /* Dark text on bright yellow */
-static char titleselbgcolor[]            = "#d79921";  /* Brighter yellow */
+static char titleselbgcolor[]            = "#fe8019";  /* Brighter yellow */
 static char titleselbordercolor[]        = "#d79921";
 static char titleselfloatcolor[]         = "#d79921";
 
@@ -57,7 +57,7 @@ static char tagsnormbordercolor[]        = "#3c3836";
 static char tagsnormfloatcolor[]         = "#b16286";
 
 static char tagsselfgcolor[]             = "#282828";  /* Dark text on bright yellow */
-static char tagsselbgcolor[]             = "#d79921";  /* Brighter yellow */
+static char tagsselbgcolor[]             = "#fe8019";  /* Brighter yellow */
 static char tagsselbordercolor[]         = "#d79921";
 static char tagsselfloatcolor[]          = "#d79921";
 
@@ -108,7 +108,7 @@ static const char *const autostart[] = {
 	NULL /* terminate */
 };
 
-const char *spcmd1[] = {"alacritty", NULL };
+const char *spcmd1[] = {"st", NULL };
 static Sp scratchpads[] = {
    /* name          cmd  */
    {"spterm",      spcmd1},
@@ -242,7 +242,7 @@ static const char *dmenucmd[] = {
 	NULL
 };
 
-static const char *termcmd[]  = { "alacritty", NULL };
+static const char *termcmd[]  = { "st", NULL };
 static const char *firefox[]  = { "firefox", NULL };
 static const char *rofi[]  = { "rofi", "-show", "drun", NULL };
 static const char *caja[]  = { "caja", NULL };
@@ -276,8 +276,8 @@ static const char *firemenu[]  = { "firemenu", NULL };
 
 static Key keys[] = {
 	/*modifierkey			function		argument */
-	{ Mod4Mask|ShiftMask,			XK_r,   		spawn,					{.v = firemenu } },
-	{ MODKEY,				XK_r,			spawn,					{.v = rofi } },
+	{ Mod4Mask|ShiftMask,	XK_r,   		spawn,					{.v = firemenu } },
+	{ MODKEY,				XK_r,			spawn,					{.v = dmenucmd } },
 	{ MODKEY,				XK_f,			spawn,					{.v =  caja } },
 	{ MODKEY,				XK_j,			focusstack,				{.i = +1 } },
 	{ MODKEY,				XK_k,			focusstack,				{.i = -1 } },
@@ -315,7 +315,6 @@ static Key keys[] = {
 	{ MODKEY,				XK_l,			setmfact,				{.f = +0.05} },
 	{ MODKEY|ShiftMask,     XK_q,quit,								{0} },
 	{ MODKEY,				XK_b,			spawn,				{.v = firefox} },
-	{ MODKEY,				XK_d,			spawn,					{.v = dmenucmd } },
 	{ MODKEY,				XK_m,			togglebar,					{0} },
 	{ MODKEY,				XK_o,			incnmaster,				{.i = +1 } },
 	{ MODKEY,				XK_Return,		spawn,					{.v = termcmd } },
