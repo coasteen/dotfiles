@@ -22,8 +22,8 @@ PROMPT="[ $%n@%m %~ ] "
 alias v="vim"
 alias vi="vim"
 
-alias cat="bat"
-alias ls="eza --icons"
+#alias cat="bat"
+#alias ls="eza --icons"
 
 alias cdwm="cd ~/.suckless/dwm && doas vim config.h; cd -"
 alias cpicom="vim ~/.config/picom/picom.conf"
