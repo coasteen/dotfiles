@@ -1,0 +1,5 @@
+patches/
+*.o
+st
+*.orig
+config.mk
