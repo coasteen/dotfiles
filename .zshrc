@@ -1,24 +1,24 @@
 ##
 ### .zshrc
-## coasteen's
-
+## coasteen's .zshrc
+#
 ############
 ## PROMPT ##
 ############
 
 ## CUSTOM PROMPT
 PROMPT="[ $%n@%m %~ ] "
-
+#
 ## STARSHIP (MUST BE INSTALLED!)
 #eval "$(starship init zsh)"
-
+#
 ## OH-MY-POSH (MUST BE INSTALLED!)
 #eval "$(oh-my-posh init zsh)"
-
+#
 #############
 ## ALIASES ##
 #############
-
+#
 alias v="vim"
 alias vi="vim"
 
@@ -38,6 +38,5 @@ function sudo() {
 ###############
 ## AUTOSTART ##
 ###############
-
-hyfetch
-
+#
+#hyfetch
