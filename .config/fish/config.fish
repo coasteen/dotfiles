@@ -4,7 +4,7 @@ alias vi="vim"
 alias ri="ranger"
 alias rim="ranger"
 
-#alias cat="bat"
+alias cat="bat"
 #alias ls="eza --icons"
 
 alias minecraft="prime-run java -jar /home/coast/documents/TLauncher.jar"
@@ -19,7 +19,7 @@ alias cneo="vim ~/.config/neofetch/con*"
 function sudo() {
     echo "Error: fuck you don't use this command"
 }
-
+end
 function fish_prompt
     set_color fe8019
     printf '[ '
