@@ -26,8 +26,7 @@ return {
   },
 
   window_background_opacity = 0.9,
-  macos_window_background_blur = 20, -- if you’re on macOS
-
+  
   colors = {
     foreground = "#d4be98",
     background = "#32302f", -- gruvbox dark soft
