@@ -7,7 +7,7 @@ padding.y = 10
 columns = 140
 lines = 30
 [font]
-normal = { family = "JetBrainsMono Nerd Font", style = "regular" }
+normal = { family = "monospace", style = "regular" }
 size = 6.5
 [colors]
 
