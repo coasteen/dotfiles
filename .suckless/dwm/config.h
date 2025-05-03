@@ -16,7 +16,7 @@ static const int swallowfloating         = 1;   /* 1 means swallow floating wind
 static const unsigned int gappih         = 10;  /* horiz inner gap between windows */
 static const unsigned int gappiv         = 10;  /* vert inner gap between windows */
 static const unsigned int gappoh         = 10;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov         = 15;  /* vert outer gap between windows and screen edge */
+static const unsigned int gappov         = 30;  /* vert outer gap between windows and screen edge */
 static const int smartgaps_fact          = 1;   /* gap factor when there is only one client; 0 = no gaps, 3 = 3x outer gaps */
 static const int showbar                 = 1;   /* 0 means no bar */
 static const int topbar                  = 1;   /* 0 means bottom bar */
@@ -27,51 +27,50 @@ static const int statusmon               = 'A';
 static int tagindicatortype              = INDICATOR_NONE;
 static int tiledindicatortype            = INDICATOR_NONE;
 static int floatindicatortype            = INDICATOR_NONE;
-static const char *fonts[]               = { "JetBrainsMono Nerd Font:size=9" };
-static const char dmenufont[]            = "JetBrainsMono Nerd Font:size=10";
+static const char *fonts[]               = { "monospace:size=9" };
+static const char dmenufont[]            = "monospacee:size=9";
 
 static char c000000[]                    = "#000000"; // placeholder value
 
-static char normfgcolor[]                = "#ebdbb2";
-static char normbgcolor[]                = "#282828";
-static char normbordercolor[]            = "#3a160a";
-static char normfloatcolor[]             = "#b16286";
+static char normfgcolor[]                = "#bbbbbb";
+static char normbgcolor[]                = "#222222";
+static char normbordercolor[]            = "#444444";
+static char normfloatcolor[]             = "#db8fd9";
 
-static char selfgcolor[]                 = "#ebdbb2";  /* Dark background for better contrast */
-static char selbgcolor[]                 = "#3a160a";  /* Brighter yellow for selections */
-static char selbordercolor[]             = "#3a160a";
-static char selfloatcolor[]              = "#d79921";
+static char selfgcolor[]                 = "#eeeeee";
+static char selbgcolor[]                 = "#005577";
+static char selbordercolor[]             = "#005577";
+static char selfloatcolor[]              = "#005577";
 
-static char titlenormfgcolor[]           = "#ebdbb2";
-static char titlenormbgcolor[]           = "#282828";
-static char titlenormbordercolor[]       = "#3c3836";
-static char titlenormfloatcolor[]        = "#b16286";
+static char titlenormfgcolor[]           = "#bbbbbb";
+static char titlenormbgcolor[]           = "#222222";
+static char titlenormbordercolor[]       = "#444444";
+static char titlenormfloatcolor[]        = "#db8fd9";
 
-static char titleselfgcolor[]            = "#ebdbb2";  /* Dark text on bright yellow */
-static char titleselbgcolor[]            = "#3a160a";  /* Brighter yellow */
-static char titleselbordercolor[]        = "#d79921";
-static char titleselfloatcolor[]         = "#d79921";
+static char titleselfgcolor[]            = "#eeeeee";
+static char titleselbgcolor[]            = "#005577";
+static char titleselbordercolor[]        = "#005577";
+static char titleselfloatcolor[]         = "#005577";
 
-static char tagsnormfgcolor[]            = "#ebdbb2";
-static char tagsnormbgcolor[]            = "#282828";
-static char tagsnormbordercolor[]        = "#3c3836";
-static char tagsnormfloatcolor[]         = "#b16286";
+static char tagsnormfgcolor[]            = "#bbbbbb";
+static char tagsnormbgcolor[]            = "#222222";
+static char tagsnormbordercolor[]        = "#444444";
+static char tagsnormfloatcolor[]         = "#db8fd9";
 
-static char tagsselfgcolor[]             = "#ebdbb2";  /* Dark text on bright yellow */
-static char tagsselbgcolor[]             = "#3a160a";  /* Brighter yellow */
-static char tagsselbordercolor[]         = "#d79921";
-static char tagsselfloatcolor[]          = "#d79921";
+static char tagsselfgcolor[]             = "#eeeeee";
+static char tagsselbgcolor[]             = "#005577";
+static char tagsselbordercolor[]         = "#005577";
+static char tagsselfloatcolor[]          = "#005577";
 
-static char hidnormfgcolor[]             = "#458588";
-static char hidselfgcolor[]              = "#689d6a";
-static char hidnormbgcolor[]             = "#282828";
-static char hidselbgcolor[]              = "#282828";
+static char hidnormfgcolor[]             = "#005577";
+static char hidselfgcolor[]              = "#227799";
+static char hidnormbgcolor[]             = "#222222";
+static char hidselbgcolor[]              = "#222222";
 
-static char urgfgcolor[]                 = "#ebdbb2";
-static char urgbgcolor[]                 = "#cc241d";
-static char urgbordercolor[]             = "#fb4934";
-static char urgfloatcolor[]              = "#b16286";
-
+static char urgfgcolor[]                 = "#bbbbbb";
+static char urgbgcolor[]                 = "#222222";
+static char urgbordercolor[]             = "#ff0000";
+static char urgfloatcolor[]              = "#db8fd9";
 
 
 static const unsigned int baralpha = 0xd0;
@@ -244,7 +243,7 @@ static const char *dmenucmd[] = {
 
 static const char *termcmd[]  = { "st", NULL };
 static const char *caja[]  = { "caja", NULL };
-static const char *floorp[]  = { "floorp", NULL };
+//static const char *floorp[]  = { "floorp", NULL };
 static const char *firemenu[]  = { "firemenu", NULL };
 
 ///////////////////////////////////////////////KEYBINDS//////////////////////////////////////////////
@@ -284,21 +283,21 @@ static Key keys[] = {
 	{ MODKEY,				XK_Up,			moveresize,				{.v = "0x -25y 0w 0h" } },
 	{ MODKEY,				XK_Right,		moveresize,				{.v = "25x 0y 0w 0h" } },
 	{ MODKEY,				XK_Left,		moveresize,				{.v = "-25x 0y 0w 0h" } },
-	{ MODKEY|ShiftMask,	         	XK_Down,		moveresize,				{.v = "0x 0y 0w 25h" } },
-	{ MODKEY|ShiftMask,		        XK_Up,			moveresize,				{.v = "0x 0y 0w -25h" } },
-	{ MODKEY|ShiftMask,		        XK_Right,		moveresize,				{.v = "0x 0y 25w 0h" } },
-	{ MODKEY|ShiftMask,		        XK_Left,		moveresize,				{.v = "0x 0y -25w 0h" } },
+	{ MODKEY|ShiftMask,	   	XK_Down,		moveresize,				{.v = "0x 0y 0w 25h" } },
+	{ MODKEY|ShiftMask,	    XK_Up,			moveresize,				{.v = "0x 0y 0w -25h" } },
+	{ MODKEY|ShiftMask,	    XK_Right,		moveresize,				{.v = "0x 0y 25w 0h" } },
+	{ MODKEY|ShiftMask,	    XK_Left,		moveresize,				{.v = "0x 0y -25w 0h" } },
 	{ MODKEY,				XK_Tab,			view,					{0} },
-	{ MODKEY|ShiftMask,	        	XK_F5,			xrdb,					{.v = NULL } },
+	{ MODKEY|ShiftMask,	   	XK_F5,			xrdb,					{.v = NULL } },
 	{ MODKEY,				XK_t,			setlayout,				{.v = &layouts[0]} },
 	{ MODKEY,				XK_space,		setlayout,				{0} },
-	{ MODKEY|ShiftMask,	        	XK_space,		togglefloating,			{0} },
-	{ MODKEY,				XK_grave,		togglescratch,			{.ui = 0 } },
-	{ MODKEY|ControlMask,	                XK_grave,		setscratch,				{.ui = 0 } },
-	{ MODKEY|ShiftMask,	        	XK_grave,		removescratch,			{.ui = 0 } },
-	{ MODKEY,			XK_w,			togglefullscreen,		{0} },
+	{ MODKEY|ShiftMask,	   	XK_space,		togglefloating,			{0} },
+	{ MODKEY,   			XK_grave,		togglescratch,			{.ui = 0 } },
+	{ MODKEY|ControlMask,   XK_grave,		setscratch,				{.ui = 0 } },
+	{ MODKEY|ShiftMask,	   	XK_grave,		removescratch,			{.ui = 0 } },
+	{ MODKEY,		    	XK_w,			togglefullscreen,		{0} },
 	{ MODKEY,				XK_0,			view,					{.ui = ~SPTAGMASK } },
-	{ MODKEY|ShiftMask,	        	XK_0,			tag,					{.ui = ~SPTAGMASK } },
+	{ MODKEY|ShiftMask,	    XK_0,			tag,					{.ui = ~SPTAGMASK } },
 	
 	  TAGKEYS(				XK_1,									0)
 	  TAGKEYS(				XK_2,									1)
@@ -313,7 +312,8 @@ static Key keys[] = {
 	{ MODKEY,				XK_h,			setmfact,				{.f = -0.05} },
 	{ MODKEY,				XK_l,			setmfact,				{.f = +0.05} },
 	{ MODKEY|ShiftMask,     XK_q,quit,								{0} },
-	{ MODKEY,				XK_b,			spawn,				{.v = floorp} },
+	//{ MODKEY,				XK_b,			spawn,				{.v = floorp} },
+    { MODKEY,               XK_b,           spawn,      SHCMD("floorp") },
 	{ MODKEY,				XK_m,			togglebar,					{0} },
 	{ MODKEY,				XK_o,			incnmaster,				{.i = +1 } },
 	{ MODKEY,				XK_Return,		spawn,					{.v = termcmd } },
@@ -397,4 +397,3 @@ static Signal signals[] = {
 	{ "setlayout",               setlayout },
 	{ "setlayoutex",             setlayoutex },
 };
-
