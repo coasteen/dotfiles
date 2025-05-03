@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "JetBrains Mono Nerd Font:antialias=true:autohint=true";
-static int borderpx = 3;
+static char *font = "monospace:antialias=true:autohint=true";
+static int borderpx = 2;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -94,7 +94,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.9;
+float alpha = 0.8;
 
 /* Background opacity */
 float alpha_def;
@@ -102,31 +102,31 @@ float alpha_def;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
   /* 8 normal colors */
-  "#282828", /* black   */
-  "#cc241d", /* red     */
-  "#98971a", /* green   */
-  "#d79921", /* yellow  */
-  "#458588", /* blue    */
-  "#b16286", /* magenta */
-  "#689d6a", /* cyan    */
-  "#a89984", /* white   */
+  "#0d0f11", /* black   (background) */
+  "#f38ba8", /* red     */
+  "#a6e3a1", /* green   */
+  "#f9e2af", /* yellow  */
+  "#89b4fa", /* blue    */
+  "#cba6f7", /* magenta */
+  "#94e2d5", /* cyan    */
+  "#e6e1cf", /* white   (foreground) */
 
   /* 8 bright colors */
-  "#928374", /* black   */
-  "#fb4934", /* red     */
-  "#b8bb26", /* green   */
-  "#fabd2f", /* yellow  */
-  "#83a598", /* blue    */
-  "#d3869b", /* magenta */
-  "#8ec07c", /* cyan    */
-  "#ebdbb2", /* white   */
+  "#45475a", /* bright black */
+  "#f38ba8", /* bright red */
+  "#a6e3a1", /* bright green */
+  "#f9e2af", /* bright yellow */
+  "#89b4fa", /* bright blue */
+  "#cba6f7", /* bright magenta */
+  "#94e2d5", /* bright cyan */
+  "#ffffff", /* bright white */
 
   [255] = 0,
-
-  /* default colors */
-  "#ebdbb2",  /* default foreground colour */
-  "#282828",  /* default background colour */
+  "#e6e1cf", /* default foreground */
+  "#0d0f11", /* default background */
 };
+
+
 /*
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
@@ -143,7 +143,7 @@ static unsigned int defaultrcs = 257;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 4;
+static unsigned int cursorshape = 6;
 
 /*
  * Default columns and rows numbers
@@ -189,7 +189,7 @@ static MouseShortcut mshortcuts[] = {
 
 /* Internal keyboard shortcuts. */
 #define MODKEY ControlMask
-#define TERMMOD (ControlMask|ShiftMask)
+#define TERMMOD (Mod1Mask|ShiftMask)
 
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
@@ -200,8 +200,8 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_equal,       zoom,           {.f = +1} },
 	{ ControlMask,         	XK_minus,       zoom,           {.f = -1} },
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
-	{ MODKEY,			    XK_c,           clipcopy,       {.i =  0} },
-	{ MODKEY,		       	XK_v,           clippaste,      {.i =  0} },
+	{ MODKEY,               XK_c,           clipcopy,       {.i =  0} },
+	{ MODKEY,               XK_v,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
