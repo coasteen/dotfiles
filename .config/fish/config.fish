@@ -44,4 +44,3 @@ end
 set -g fish_greeting
 end
 set -U fish_color_autosuggestion '808080'
-bash
