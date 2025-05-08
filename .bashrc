@@ -10,6 +10,7 @@
     alias caja="swallow caja"
     alias sxiv="swallow sxiv"
     alias ffplay="swallow ffplay"
+    alias pluma="swallow pluma"
 ## ## ## SWALLOWS )
 
 ## ## ## EXPORT (
