@@ -1,6 +1,6 @@
 picom -b &
 dunst &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-feh --bg-scale ~/Pictures/cherry_tree_imresizer.jpg &
+xwallpaper --center ~/Pictures/image.png&
 dwmblocks &
 exec dwm
