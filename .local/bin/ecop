@@ -1,0 +1,17 @@
+#!/bin/sh
+shell=$(basename "$SHELL")
+if [ "$shell" = "zsh" ] || [ "$shell" = "bash" ]; then
+    if [ "$XDG_SESSION_TYPE" = "wayland" ]; then
+	"$@" | tee >(wl-copy)
+    elif [ "$XDG_SESSION_TYPE" = "x11" ]; then
+        "$@" | tee >(xclip -selection clipboard)
+    else
+	echo "UNKNOWN SESSION TYPE!! >> $XDG_SESSION_TYPE"
+	exit 1
+    fi
+else
+    echo "Unsupported shell: $shell"
+    exit 1
+fi
+
+exit 0
