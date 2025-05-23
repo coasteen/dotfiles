@@ -1,4 +1,11 @@
 #!/usr/bin/zsh
+#           _              
+#   _______| |__  _ __ ___ 
+#  |_  / __| '_ \| '__/ __|
+# _ / /\__ \ | | | | | (__ 
+#(_)___|___/_| |_|_|  \___|
+#                          
+#Coasteen's ~/.zshrc
 HISTFILE=$HOME/.cache/zsh/history
 SAVEHIST=100000000
 HISTSIZE=$SAVEHIST
